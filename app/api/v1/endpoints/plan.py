@@ -11,7 +11,7 @@ import json
 router = APIRouter()
 
 @router.post("/plan")
-def recommend_plan(request: PlanRequest, db: Session = Depends(get_db)):
+async def recommend_plan(request: PlanRequest, db: Session = Depends(get_db)):
 
 
     call_count = db.query(PlanCallCount).first()

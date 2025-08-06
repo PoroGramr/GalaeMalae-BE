@@ -12,7 +12,7 @@ if not os.getenv("GOOGLE_API_KEY"):
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 
-def create_travel_plan(destination: str, schedule: str) -> dict:
+async def create_travel_plan(destination: str, schedule: str) -> dict:
     """
     여행지(destination)와 일정(schedule)을 받아 Gemini API를 통해 여행 계획을 생성합니다.
 
